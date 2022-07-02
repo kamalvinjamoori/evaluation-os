@@ -1,0 +1,40 @@
+Singleton pattern is a creational design pattern
+this type of pattern is used when there is a need of using single instance of class and multiple objects are
+prohibited.
+through the single ton design pattern we can make sure that only one instance of class is created and
+it is supplied for multiple times whenever required.
+
+
+for example in the program we can see whenever the SingletonEagerLoading/SingletonLazyLoading object is created
+it is returing same object as in main class when we equate the instances every time the output is true
+which means all the instances are only one.
+
+This can be achieved in two ways Eager loading and Lazy loading
+
+Eager Loading
+----------------
+as shown in the code in Eager loading we create the object and assign to the varible when we Load the 
+program itself
+
+this can be used whenever there is no issues with memory and speed.
+in Eager loading as the object is creating beforehand and loading into the context area 
+there may be slow in performance.
+
+LazyLoading
+------------
+as we can see in Lazy loading class(SingletonLazyLoading) the object is created only when it is required
+otherwise it is null.
+
+since we are creating the objects dynamically at the runtime this gives better performance in terms of memory usage and
+speed.
+
+but in lazy loading there may be cances that in multi threading environment more than one threads can act
+at same time and more than one object can be create so to avoid this we made the method threadsafe by using
+Synchronized keyword.
+
+by volatile keyword me make sure that everytime the value of the variable can be read from the main memory
+not from the cache in this way we can also attain consistency and make sure
+one and only one object is reated and supplied.
+
+
+ 
